@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    padding-inline: 2%;
+}
+
+.wall{
+    background-color: white;
+    position: fixed;
+    height: 100%;
+    width: 300px;
+
+}
+
+.pleaes{
+    background-color: rgb(197, 197, 96);
+    height: 100%;
+    border-radius: 5px;
+    margin-left: 300px;
+}
+
+.list-group{
+    display: block;
+    margin: auto;
+    margin-right: 30px;
+}
+
+.axdaris{
+    padding: 2px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.card img{
+    transition: all 0.5s;
+}
+
+.card img:hover{
+    transform: scale(1.1);
+}

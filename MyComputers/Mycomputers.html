@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Mycomputers.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
+
+</head>
+
+<body>
+    <main>
+        <button id="btn" class="btn btn-warning">Esas sehife</button>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Yeni komputer
+        </button>
+
+        <hr>
+        <!--table-->
+        <div class="table1">
+            <table class="table">
+                <thead>
+                    <th>ID</th>
+                    <th>Ad</th>
+                    <th>Sekil</th>
+                    <th>qiymet</th>
+                    <th>Emeliyatlar</th>
+                </thead>
+                <tbody class="tbody">
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modals">
+        <div class="modal fade modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: rgb(224, 219, 219);">
+                        <h1 style="text-align: center;" class="modal-title fs-5" id="exampleModalLabel">Yeni</h1>
+                        <button type="button" class="btn-close bg-danger" style="color: white;" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="background-color: rgb(224, 219, 219);">
+                        <form class="row g-3 needs-validation" novalidate>
+                            <div class="col-6">
+                                <!--Kateqoriyalar-->
+                                <label for="validationCustom01" class="form-label">Kateqoriyalar:</label>
+                                <div class="col-12">
+                                    <select class="form-select" id="validationCustom01" required>
+                                        <option selected>Acer</option>
+                                        <option>HP</option>
+                                        <option>Asus</option>
+                                        <option>Dell</option>
+                                        <option>Lenovo</option>
+                                        <option>LG</option>
+                                        <option>Casper</option>
+                                        <option>Fujitsu</option>
+                                        <option>Nexus</option>
+                                        <option>Samsung</option>
+                                        <option>Toshiba</option>
+                                        <option>Sony</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <!--ad-->
+                                    <label for="validationCustom02" class="form-label">Ad:</label>
+                                    <input type="text" minlength="2" maxlength="30" class=" form-control"
+                                        id="validationCustom02" required>
+                                    <div class="invalid-feedback">
+                                        Bos qoymayin. maximum 2 ,minimum 30 simvol ola biler
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <!--qiymet-->
+                                    <label for="validationCustomUsername" class="form-label">Qiymet:</label>
+                                    <input type="number" minlength="0" maxlength="100000" class="form-control col-12"
+                                        id="validationCustom03" aria-describedby="inputGroupPrepend" required>
+                                    <div class="invalid-feedback">
+                                        Bos qoymayin. minimum 0 , maximum 100000 simvol ola biler
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <!--tesvir-->
+                                    <label for="validationCustom03" class="form-label">Tesvir:</label>
+                                    <input type="text" minlength="2" maxlength="300" class="col-12 form-control"
+                                        id="validationCustom04" required>
+                                    <div class="invalid-feedback">
+                                        Bos qoymayin. minimum 2 , maximum 300 simvol ola biler
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <!--yeni-->
+                                    <label for="validationCustom04" class="form-label">Yeni:</label>
+                                    <select class="form-select col-12" id="validationCustom05" required>
+                                        <option selected>Yeni</option>
+                                        <option>Xeyr</option>
+                                    </select>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <!--sekil-->
+                                    <label for="validationCustom05" class="form-label">sekil:</label>
+                                    <input type="text" class="col-12 form-control sekil" id="validationCustom06"
+                                        required>
+                                    <div class="imgparent">
+
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Bos qoymayin
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-6">
+                                <div class="col-12">
+                                    <label for="validationCustom05" class="form-label">Emeli yadas (GB):</label>
+                                    <input type="text" class="form-control col-12" id="validationCustom07" required>
+                                    <div class="invalid-feedback">
+                                        Bos qoymayin
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="validationCustom05" class="form-label">Merkezi prosesor:</label>
+                                    <input type="text" class="form-control col-12" id="validationCustom08" required>
+                                    <div class="invalid-feedback">
+                                        Bos qoymayin
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="validationCustom05" class="form-label">Daymi Yaddas (GB):</label>
+                                    <input type="text" class="form-control col-12" id="validationCustom09" required>
+                                    <div class="invalid-feedback">
+                                        Bos qoymayin
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="validationCustom05" class="form-label">Daymi Yaddas tipi:</label>
+                                    <select class="form-select col-12" id="validationCustom10" required>
+                                        <option>HDD</option>
+                                        <option>SSD</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Bos qoymayin
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="validationCustom05" class="form-label">Emeliyyat sistem:</label>
+                                    <input type="text" class="form-control col-12" id="validationCustom11" required>
+                                    <div class="invalid-feedback">
+                                        Bos qoymayin
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="validationCustom05" class="form-label">Video Kart (GB):</label>
+                                    <input type="text" class="form-control col-12" id="validationCustom12" required>
+                                    <div class="invalid-feedback">
+                                        Bos qoymayin
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="modal-footer">
+                                    <button type="submit" id="btn" class="btn btn-primary"
+                                        data-bs-dismiss="modal">yaddasda
+                                        saxla</button>
+                                    <button style="margin-right: 72%;" type="button" id="btn1"
+                                        class="btn btn-warning">sifirla</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="modal modal1 fade modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: rgb(224, 219, 219);">
+                        <h1 style="text-align: center;" class="modal-title fs-5" id="exampleModalLabel">Redakte</h1>
+                        <button type="button" class="btn-close bg-danger" style="color: white;" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="background-color: rgb(224, 219, 219);">
+                        <form class="row g-3 needs-validation editForm" novalidate>
+                            <div class="col-6">
+                                <!--Kateqoriyalar-->
+                                <label for="editkote" class="form-label">Kateqoriyalar:</label>
+                                <div class="col-12">
+                                    <select class="form-select" id="editkote" required>
+                                        <option selected>Acer</option>
+                                        <option>HP</option>
+                                        <option>Asus</option>
+                                        <option>Dell</option>
+                                        <option>Lenovo</option>
+                                        <option>LG</option>
+                                        <option>Casper</option>
+                                        <option>Fujitsu</option>
+                                        <option>Nexus</option>
+                                        <option>Samsung</option>
+                                        <option>Toshiba</option>
+                                        <option>Sony</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <!--ad-->
+                                    <label for="editad" class="form-label">Ad:</label>
+                                    <input type="text" minlength="2" maxlength="30" class=" form-control" id="editad"
+                                        required>
+                                    <div class="invalid-feedback">
+                                        Bos qoymayin. maximum 2 ,minimum 30 simvol ola biler
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <!--qiymet-->
+                                    <label for="editqiymet" class="form-label">Qiymet:</label>
+                                    <input type="number" minlength="0" maxlength="100000" class="form-control col-12"
+                                        id="editqiymet" aria-describedby="inputGroupPrepend" required>
+                                    <div class="invalid-feedback">
+                                        Bos qoymayin. minimum 0 , maximum 100000 simvol ola biler
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <!--tesvir-->
+                                    <label for="edittesvir" class="form-label">Tesvir:</label>
+                                    <input type="text" minlength="2" maxlength="300" class="col-12 form-control"
+                                        id="edittesvir" required>
+                                    <div class="invalid-feedback">
+                                        Bos qoymayin. minimum 2 , maximum 300 simvol ola biler
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <!--yeni-->
+                                    <label for="edityeni" class="form-label">Yeni:</label>
+                                    <select class="form-select col-12" id="edityeni" required>
+                                        <option selected>Yeni</option>
+                                        <option>Xeyr</option>
+                                    </select>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <!--sekil-->
+                                    <label for="editsekil" class="form-label">sekil:</label>
+                                    <input type="text" class="col-12 form-control editsekil" id="editsekil" required>
+                                    <div class="editimg">
+
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Bos qoymayin
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-6">
+                                <div class="col-12">
+                                    <label for="editEY" class="form-label">Emeli yadas (GB):</label>
+                                    <input type="text" class="form-control col-12" id="editEY" required>
+                                    <div class="invalid-feedback">
+                                        Bos qoymayin
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="editMP" class="form-label">Merkezi prosesor:</label>
+                                    <input type="text" class="form-control col-12" id="editMP" required>
+                                    <div class="invalid-feedback">
+                                        Bos qoymayin
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="editDY" class="form-label">Daymi Yaddas (GB):</label>
+                                    <input type="text" class="form-control col-12" id="editDY" required>
+                                    <div class="invalid-feedback">
+                                        Bos qoymayin
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="editDYT" class="form-label">Daymi Yaddas tipi:</label>
+                                    <select class="form-select col-12" id="editDYT" required>
+                                        <option>HDD</option>
+                                        <option>SSD</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Bos qoymayin
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="editES" class="form-label">emeli sistem:</label>
+                                    <input type="text" class="form-control col-12" id="editES" required>
+                                    <div class="invalid-feedback">
+                                        Bos qoymayin
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="editVK" class="form-label">Video Kart (GB):</label>
+                                    <input type="text" class="form-control col-12" id="editVK" required>
+                                    <div class="invalid-feedback">
+                                        Bos qoymayin
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Duzgun
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="modal-footer">
+                                    <button type="submit" id="btn" class="btn btn-primary"
+                                        data-bs-dismiss="modal">yaddasda
+                                        saxla</button>
+                                    <button style="margin-right: 72%;" type="button" id="btn1"
+                                        class="btn btn-warning">sifirla</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="modal modal2 fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body modalbody">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Toasts-->
+    <div class="toasts">
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="./download.jpg" class="rounded me-2" alt="...">
+                <strong class="me-auto">Document</strong>
+                <small>1 second ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">+
+                Zehmet olmasa butun inputlari duzgun doldurun
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="//cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+    <script src="./Mycomputers.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sinIn.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <main>
+        <hr>
+        <button id="btn1" class="btn btn-warning" style="width: 110px;padding: 5px;">Esas sehve</button>
+        <form class="row g-3 needs-validation" novalidate>
+            <hr>
+            <h3>Hesaba daxil olmaq</h3>
+            <hr>
+            <div class="col-12">
+                <label for="validationCustom01" class="form-label">istifadeci Adi:</label>
+                <input type="text" class="form-control" id="validationCustom01" required>
+            </div>
+            <div class="col-12">
+                <label for="validationCustom02" class="form-label">sifre:</label>
+                <input type="password" class="form-control" id="validationCustom02" required>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-success" id="btn2" type="submit">Submit form</button>
+            </div>
+            <hr>
+            <div class="valideyn">
+                <span>Hesabin yoxdur?</span>
+                <div id="liveAlertPlaceholder"></div>
+                <button type="button" id="btn3" class="btn btn-primary" id="liveAlertBtn">Hesab yarat</button>
+            </div>
+
+        </form>
+    </main>
+
+    <!--modals-->
+    <div class="modals">
+        <!--2-ci modal-->
+        <div class="modal errormodal fade" id="emodal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">xeta</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Istifadeci adi veya sifre sehefdir
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="./sinIn.js"></script>
+</body>
+
+</html>

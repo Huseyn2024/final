@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    padding-inline: 38%;
+}
+
+.btn{
+    padding: 5px;
+}
+
+.sVBV{
+    display: flex;
+}
+
+input{
+    display: block;
+    padding: 38%;
+}
+
